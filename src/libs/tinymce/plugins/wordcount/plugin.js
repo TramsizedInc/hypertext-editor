@@ -286,29 +286,29 @@
 
     const open = (editor, api) => {
       editor.windowManager.open({
-        title: 'Word Count',
+        title: 'Szavak száma',
         body: {
           type: 'panel',
           items: [{
               type: 'table',
               header: [
-                'Count',
-                'Document',
-                'Selection'
+                'Megszámlált',
+                'Dokumentum',
+                'Kiválasztás'
               ],
               cells: [
                 [
-                  'Words',
+                  'Szavak',
                   String(api.body.getWordCount()),
                   String(api.selection.getWordCount())
                 ],
                 [
-                  'Characters (no spaces)',
+                  'Karakterek (szóközök nélkül)',
                   String(api.body.getCharacterCountWithoutSpaces()),
                   String(api.selection.getCharacterCountWithoutSpaces())
                 ],
                 [
-                  'Characters',
+                  'Karakterek száma',
                   String(api.body.getCharacterCount()),
                   String(api.selection.getCharacterCount())
                 ]
@@ -318,7 +318,7 @@
         buttons: [{
             type: 'cancel',
             name: 'close',
-            text: 'Close',
+            text: 'Bezárás',
             primary: true
           }]
       });

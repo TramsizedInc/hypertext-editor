@@ -74,7 +74,7 @@ function editorSetup(editor) {
 
     editor.ui.registry.addMenuItem('newwindow', {
       icon: 'window-icon',
-      text: 'New window',
+      text: 'Új ablak',
       onAction: async function () {
         window.open('/editor', 'newwindow' + Math.random(), 'height=' + window.innerHeight + ',width=' + window.outerWidth);
       },
@@ -86,7 +86,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('embed', {
     icon: 'embed',
-    text: 'Embed...',
+    text: 'Beágyazás...',
     onAction: function () {
       editEmbed();
     },
@@ -108,7 +108,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('image', {
     icon: 'image',
-    text: 'Image...',
+    text: 'Kép...',
     onAction: function () {
       editImage();
     },
@@ -129,7 +129,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('spelling', {
     icon: 'spell-check',
-    text: 'Spelling',
+    text: 'Helyesírás ellenőrzés',
     onAction: function () {
       showSpelling();
     },
@@ -177,7 +177,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('edit-block', {
     icon: 'sourcecode',
-    text: 'Edit Block',
+    text: 'Forráskód szerkesztése',
     onAction: function () {
       editBlock();
     },
@@ -248,7 +248,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addToggleMenuItem('edit-css', {
     icon: 'css-icon',
-    text: 'Edit CSS',
+    text: 'CSS fájl szerkesztése',
     shortcut: 'Meta+Shift+0',
     onAction: function () {
       toggleSidebarCSS();
@@ -270,7 +270,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('run-macro', {
     icon: 'arrow-right',
-    text: 'Run Macro...',
+    text: 'Makró futtatása...',
     onAction: function () {
       runMacro();
     },
@@ -288,7 +288,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('edit-head', {
     icon: 'head-icon',
-    text: 'Edit Head...',
+    text: 'HTML fejléc szerkesztése...',
     shortcut: 'Meta+Shift+8',
     onAction: function () {
       editHead();
@@ -324,7 +324,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('edit-prefs', {
     icon: 'preferences',
-    text: 'Preferences',
+    text: 'Beállítások',
     onAction: function () {
       editPrefs();
     },
@@ -341,7 +341,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('edit-doc-props', {
     icon: 'docprops-icon',
-    text: 'Document Properties',
+    text: 'Dokumentum Tulajdonságai',
     onAction: function () {
       editDocProps();
     },
@@ -358,7 +358,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('add-toc', {
     icon: 'toc',
-    text: 'Table of Contents',
+    text: 'Tartalomjegyzék',
     onAction: function () {
       createTableOfContents();
     },
@@ -382,7 +382,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addToggleMenuItem('toggle-darkmode', {
     icon: 'contrast',
-    text: 'Toggle dark mode',
+    text: 'Sötét mód',
     onAction: function () {
       toggleDarkMode();
     },
@@ -400,28 +400,28 @@ function editorSetup(editor) {
     getSubmenuItems: () => [
       {
         type: 'menuitem',
-        text: 'Import CSS',
+        text: 'CSS importálása',
         onAction: function () {
           importCSSFile();
         },
       },
       {
         type: 'menuitem',
-        text: 'Export CSS',
+        text: 'CSS exportálása',
         onAction: function () {
           exportCSSFile();
         },
       },
       {
         type: 'menuitem',
-        text: 'Save as my default...',
+        text: 'Beállítás alapértelmezett stíluslapként...',
         onAction: function () {
           setCSSDefault();
         },
       },
       {
         type: 'menuitem',
-        text: 'Reset default...',
+        text: 'Alapértelmezések visszaállítása...',
         onAction: function () {
           resetCSSDefault();
         },
@@ -433,7 +433,7 @@ function editorSetup(editor) {
   /* *********************** */
 
     editor.ui.registry.addToggleMenuItem('visualaid-option', {
-      text: 'Show invisible items',
+      text: 'Minden látszik',
       icon: 'drag',
       onSetup: function(api){
         api.setActive(editor.hasVisual);
@@ -457,7 +457,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('menunew', {
     icon: 'new-document',
-    text: 'New',
+    text: 'Új dokumentum',
     onAction: function () {
       if (confirmDocumentChange()) {
         toggleSidebarCSS(false);
@@ -470,7 +470,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('menuopen', {
     icon: 'browse',
-    text: 'Open',
+    text: 'Megnyitás',
     shortcut: 'Meta+O',
     onAction: function () {
       if (confirmDocumentChange()) {
@@ -484,7 +484,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('menusave', {
     icon: 'save',
-    text: 'Save',
+    text: 'Mentés',
     shortcut: 'Meta+S',
     onAction: function () {
       saveHTMLFile();
@@ -495,7 +495,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('menusaveas', {
     icon: 'save',
-    text: 'Save As...',
+    text: 'Mentés másként...',
     shortcut: 'Meta+Shift+S',
     onAction: function () {
       saveHTMLFileAs();
@@ -506,7 +506,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('blockquotemenu', {
     icon: 'quote',
-    text: 'Blockquote',
+    text: 'Idézet',
     onAction: function () {
       tinyMCE.execCommand('mceBlockQuote');
     },
@@ -516,7 +516,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('unordered', {
     icon: 'unordered-list',
-    text: 'Bullet List',
+    text: 'Felsorolás',
     onAction: function () {
       tinyMCE.execCommand('InsertUnorderedList');
     },
@@ -526,7 +526,7 @@ function editorSetup(editor) {
 
   editor.ui.registry.addMenuItem('ordered', {
     icon: 'ordered-list',
-    text: 'Numbered List',
+    text: 'Számozott felsorolás',
     onAction: function () {
       tinyMCE.execCommand('InsertOrderedList');
     },
@@ -535,12 +535,12 @@ function editorSetup(editor) {
   /* *********************** */
 
   editor.ui.registry.addNestedMenuItem('export', {
-    text: 'Export',
+    text: 'Exportálás',
     icon: 'export-icon',
     getSubmenuItems: () => [
       {
         type: 'menuitem',
-        text: 'Unformatted HTML',
+        text: 'Formázatlan HTML',
         onAction: function () {
           exportUnformattedHTML();
         },
@@ -552,12 +552,12 @@ function editorSetup(editor) {
 
 
   editor.ui.registry.addNestedMenuItem('indentation', {
-    text: 'Indentation',
+    text: 'Térköz',
     getSubmenuItems: () => [
       {
         type: 'menuitem',
         icon: 'indent',
-        text: 'Indent',
+        text: 'Belső térköz',
         onAction: function () {
           tinyMCE.execCommand('indent');
         },
@@ -565,7 +565,7 @@ function editorSetup(editor) {
       {
         type: 'menuitem',
         icon: 'outdent',
-        text: 'Outdent',
+        text: 'Külső térköz',
         onAction: function () {
           tinyMCE.execCommand('outdent');
         },
@@ -763,7 +763,7 @@ function editorSetup(editor) {
     window.addEventListener('beforeunload', function (event) {
       if (tinymce.activeEditor.isDirty()) {
         event.preventDefault();
-        return (event.returnValue = 'Are you sure you want to exit?');
+        return (event.returnValue = 'Biztosan kilép?');
       }
     });
 

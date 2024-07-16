@@ -1,5 +1,5 @@
 /* *********************** */
 
-var appName = 'Hypertext';
+var appName = 'Szerkesztő';
 
 tinymce.init(editorInitSettings);

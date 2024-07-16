@@ -592,7 +592,7 @@
         } else if (elem.mozMatchesSelector !== undefined) {
           return elem.mozMatchesSelector(selector);
         } else {
-          throw new Error('Browser lacks native selectors');
+          throw new Error('Böngésző nem támogatott');
         }
       }
     };

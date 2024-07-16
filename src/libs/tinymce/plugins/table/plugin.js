@@ -2894,127 +2894,127 @@
         }
       };
       addButtonIfRegistered('tableprops', {
-        tooltip: 'Table properties',
+        tooltip: 'Táblázat tulajdonságai',
         command: 'mceTableProps',
         icon: 'table',
         onSetup: selectionTargets.onSetupTable
       });
       addButtonIfRegistered('tabledelete', {
-        tooltip: 'Delete table',
+        tooltip: 'Táblázat törlése',
         command: 'mceTableDelete',
         icon: 'table-delete-table',
         onSetup: selectionTargets.onSetupTable
       });
       addButtonIfRegistered('tablecellprops', {
-        tooltip: 'Cell properties',
+        tooltip: 'Cella tulajdonságai',
         command: 'mceTableCellProps',
         icon: 'table-cell-properties',
         onSetup: selectionTargets.onSetupCellOrRow
       });
       addButtonIfRegistered('tablemergecells', {
-        tooltip: 'Merge cells',
+        tooltip: 'Cellák egyesítése',
         command: 'mceTableMergeCells',
         icon: 'table-merge-cells',
         onSetup: selectionTargets.onSetupMergeable
       });
       addButtonIfRegistered('tablesplitcells', {
-        tooltip: 'Split cell',
+        tooltip: 'Cella felosztása',
         command: 'mceTableSplitCells',
         icon: 'table-split-cells',
         onSetup: selectionTargets.onSetupUnmergeable
       });
       addButtonIfRegistered('tableinsertrowbefore', {
-        tooltip: 'Insert row before',
+        tooltip: 'Sor beszúrása felé',
         command: 'mceTableInsertRowBefore',
         icon: 'table-insert-row-above',
         onSetup: selectionTargets.onSetupCellOrRow
       });
       addButtonIfRegistered('tableinsertrowafter', {
-        tooltip: 'Insert row after',
+        tooltip: 'Sor beszúrása alá',
         command: 'mceTableInsertRowAfter',
         icon: 'table-insert-row-after',
         onSetup: selectionTargets.onSetupCellOrRow
       });
       addButtonIfRegistered('tabledeleterow', {
-        tooltip: 'Delete row',
+        tooltip: 'Sor törlése',
         command: 'mceTableDeleteRow',
         icon: 'table-delete-row',
         onSetup: selectionTargets.onSetupCellOrRow
       });
       addButtonIfRegistered('tablerowprops', {
-        tooltip: 'Row properties',
+        tooltip: 'Sor tulajdonsaágai',
         command: 'mceTableRowProps',
         icon: 'table-row-properties',
         onSetup: selectionTargets.onSetupCellOrRow
       });
       addButtonIfRegistered('tableinsertcolbefore', {
-        tooltip: 'Insert column before',
+        tooltip: 'Oszlop beszúrása elé',
         command: 'mceTableInsertColBefore',
         icon: 'table-insert-column-before',
         onSetup: selectionTargets.onSetupColumn('onFirst')
       });
       addButtonIfRegistered('tableinsertcolafter', {
-        tooltip: 'Insert column after',
+        tooltip: 'Oszlop beszúrása mögé',
         command: 'mceTableInsertColAfter',
         icon: 'table-insert-column-after',
         onSetup: selectionTargets.onSetupColumn('onLast')
       });
       addButtonIfRegistered('tabledeletecol', {
-        tooltip: 'Delete column',
+        tooltip: 'Oszlop törlése',
         command: 'mceTableDeleteCol',
         icon: 'table-delete-column',
         onSetup: selectionTargets.onSetupColumn('onAny')
       });
       addButtonIfRegistered('tablecutrow', {
-        tooltip: 'Cut row',
+        tooltip: 'Sor kivágása',
         command: 'mceTableCutRow',
         icon: 'cut-row',
         onSetup: selectionTargets.onSetupCellOrRow
       });
       addButtonIfRegistered('tablecopyrow', {
-        tooltip: 'Copy row',
+        tooltip: 'Sor másolása',
         command: 'mceTableCopyRow',
         icon: 'duplicate-row',
         onSetup: selectionTargets.onSetupCellOrRow
       });
       addButtonIfRegistered('tablepasterowbefore', {
-        tooltip: 'Paste row before',
+        tooltip: 'Sor beillesztése fölé',
         command: 'mceTablePasteRowBefore',
         icon: 'paste-row-before',
         onSetup: selectionTargets.onSetupPasteable(getRows)
       });
       addButtonIfRegistered('tablepasterowafter', {
-        tooltip: 'Paste row after',
+        tooltip: 'Sor beillesztése alá',
         command: 'mceTablePasteRowAfter',
         icon: 'paste-row-after',
         onSetup: selectionTargets.onSetupPasteable(getRows)
       });
       addButtonIfRegistered('tablecutcol', {
-        tooltip: 'Cut column',
+        tooltip: 'Oszlop kivágása',
         command: 'mceTableCutCol',
         icon: 'cut-column',
         onSetup: selectionTargets.onSetupColumn('onAny')
       });
       addButtonIfRegistered('tablecopycol', {
-        tooltip: 'Copy column',
+        tooltip: 'Oszlop másolása',
         command: 'mceTableCopyCol',
         icon: 'duplicate-column',
         onSetup: selectionTargets.onSetupColumn('onAny')
       });
       addButtonIfRegistered('tablepastecolbefore', {
-        tooltip: 'Paste column before',
+        tooltip: 'Oszlop beillesztése elé',
         command: 'mceTablePasteColBefore',
         icon: 'paste-column-before',
         onSetup: selectionTargets.onSetupPasteableColumn(getColumns, 'onFirst')
       });
       addButtonIfRegistered('tablepastecolafter', {
-        tooltip: 'Paste column after',
+        tooltip: 'Oszlop beillesztése mögé',
         command: 'mceTablePasteColAfter',
         icon: 'paste-column-after',
         onSetup: selectionTargets.onSetupPasteableColumn(getColumns, 'onLast')
       });
       addButtonIfRegistered('tableinsertdialog', {
-        tooltip: 'Insert table',
+        tooltip: 'Táblázat beszúrása',
         command: 'mceInsertTableDialog',
         icon: 'table'
       });
@@ -3131,49 +3131,49 @@
       };
       const hasRowMenuItems = [
         addMenuIfRegistered('tableinsertrowbefore', {
-          text: 'Insert row before',
+          text: 'Insert beszúrása fölé',
           icon: 'table-insert-row-above',
           command: 'mceTableInsertRowBefore',
           onSetup: selectionTargets.onSetupCellOrRow
         }),
         addMenuIfRegistered('tableinsertrowafter', {
-          text: 'Insert row after',
+          text: 'Sor beszúrása alá',
           icon: 'table-insert-row-after',
           command: 'mceTableInsertRowAfter',
           onSetup: selectionTargets.onSetupCellOrRow
         }),
         addMenuIfRegistered('tabledeleterow', {
-          text: 'Delete row',
+          text: 'Sor törlése',
           icon: 'table-delete-row',
           command: 'mceTableDeleteRow',
           onSetup: selectionTargets.onSetupCellOrRow
         }),
         addMenuIfRegistered('tablerowprops', {
-          text: 'Row properties',
+          text: 'Sor tulajdonsága',
           icon: 'table-row-properties',
           command: 'mceTableRowProps',
           onSetup: selectionTargets.onSetupCellOrRow
         }),
         addMenuIfRegistered('tablecutrow', {
-          text: 'Cut row',
+          text: 'Sor kivágása',
           icon: 'cut-row',
           command: 'mceTableCutRow',
           onSetup: selectionTargets.onSetupCellOrRow
         }),
         addMenuIfRegistered('tablecopyrow', {
-          text: 'Copy row',
+          text: 'Sor másolása',
           icon: 'duplicate-row',
           command: 'mceTableCopyRow',
           onSetup: selectionTargets.onSetupCellOrRow
         }),
         addMenuIfRegistered('tablepasterowbefore', {
-          text: 'Paste row before',
+          text: 'Sor beillesztése elé',
           icon: 'paste-row-before',
           command: 'mceTablePasteRowBefore',
           onSetup: selectionTargets.onSetupPasteable(getRows)
         }),
         addMenuIfRegistered('tablepasterowafter', {
-          text: 'Paste row after',
+          text: 'Sor beillesztése mögé',
           icon: 'paste-row-after',
           command: 'mceTablePasteRowAfter',
           onSetup: selectionTargets.onSetupPasteable(getRows)
@@ -3181,37 +3181,37 @@
       ];
       const hasColumnMenuItems = [
         addMenuIfRegistered('tableinsertcolumnbefore', {
-          text: 'Insert column before',
+          text: 'Insert beszúrása elé',
           icon: 'table-insert-column-before',
           command: 'mceTableInsertColBefore',
           onSetup: selectionTargets.onSetupColumn('onFirst')
         }),
         addMenuIfRegistered('tableinsertcolumnafter', {
-          text: 'Insert column after',
+          text: 'Oszlop beszúrása mögé',
           icon: 'table-insert-column-after',
           command: 'mceTableInsertColAfter',
           onSetup: selectionTargets.onSetupColumn('onLast')
         }),
         addMenuIfRegistered('tabledeletecolumn', {
-          text: 'Delete column',
+          text: 'Oszlop törlése',
           icon: 'table-delete-column',
           command: 'mceTableDeleteCol',
           onSetup: selectionTargets.onSetupColumn('onAny')
         }),
         addMenuIfRegistered('tablecutcolumn', {
-          text: 'Cut column',
+          text: 'Oszlop kivágása',
           icon: 'cut-column',
           command: 'mceTableCutCol',
           onSetup: selectionTargets.onSetupColumn('onAny')
         }),
         addMenuIfRegistered('tablecopycolumn', {
-          text: 'Copy column',
+          text: 'Oszlop másolása',
           icon: 'duplicate-column',
           command: 'mceTableCopyCol',
           onSetup: selectionTargets.onSetupColumn('onAny')
         }),
         addMenuIfRegistered('tablepastecolumnbefore', {
-          text: 'Paste column before',
+          text: 'Oszlop beszúrása elé',
           icon: 'paste-column-before',
           command: 'mceTablePasteColBefore',
           onSetup: selectionTargets.onSetupPasteableColumn(getColumns, 'onFirst')
@@ -3245,13 +3245,13 @@
       ];
       if (!hasTableGrid(editor)) {
         editor.ui.registry.addMenuItem('inserttable', {
-          text: 'Table',
+          text: 'Táblázat',
           icon: 'table',
           onAction: cmd('mceInsertTableDialog')
         });
       } else {
         editor.ui.registry.addNestedMenuItem('inserttable', {
-          text: 'Table',
+          text: 'Táblázat',
           icon: 'table',
           getSubmenuItems: () => [{
               type: 'fancymenuitem',
@@ -3261,17 +3261,17 @@
         });
       }
       editor.ui.registry.addMenuItem('inserttabledialog', {
-        text: 'Insert table',
+        text: 'Táblázat beszúrása',
         icon: 'table',
         onAction: cmd('mceInsertTableDialog')
       });
       addMenuIfRegistered('tableprops', {
-        text: 'Table properties',
+        text: 'Táblázat tulajdonságai',
         onSetup: selectionTargets.onSetupTable,
         command: 'mceTableProps'
       });
       addMenuIfRegistered('deletetable', {
-        text: 'Delete table',
+        text: 'Táblázat törlése',
         icon: 'table-delete-table',
         onSetup: selectionTargets.onSetupTable,
         command: 'mceTableDelete'
@@ -3279,21 +3279,21 @@
       if (contains(hasRowMenuItems, true)) {
         editor.ui.registry.addNestedMenuItem('row', {
           type: 'nestedmenuitem',
-          text: 'Row',
+          text: 'Sor',
           getSubmenuItems: constant('tableinsertrowbefore tableinsertrowafter tabledeleterow tablerowprops | tablecutrow tablecopyrow tablepasterowbefore tablepasterowafter')
         });
       }
       if (contains(hasColumnMenuItems, true)) {
         editor.ui.registry.addNestedMenuItem('column', {
           type: 'nestedmenuitem',
-          text: 'Column',
+          text: 'Oszlop',
           getSubmenuItems: constant('tableinsertcolumnbefore tableinsertcolumnafter tabledeletecolumn | tablecutcolumn tablecopycolumn tablepastecolumnbefore tablepastecolumnafter')
         });
       }
       if (contains(hasCellMenuItems, true)) {
         editor.ui.registry.addNestedMenuItem('cell', {
           type: 'nestedmenuitem',
-          text: 'Cell',
+          text: 'Cella',
           getSubmenuItems: constant('tablecellprops tablemergecells tablesplitcells')
         });
       }
@@ -3313,7 +3313,7 @@
       if (tableClassList.length !== 0 && editor.queryCommandSupported('mceTableToggleClass')) {
         editor.ui.registry.addNestedMenuItem('tableclass', {
           icon: 'table-classes',
-          text: 'Table styles',
+          text: 'Táblázat stílusok',
           getSubmenuItems: () => buildMenuItems(editor, tableClassList, 'tableclass', value => editor.execCommand('mceTableToggleClass', false, value)),
           onSetup: selectionTargets.onSetupTable
         });
@@ -3322,7 +3322,7 @@
       if (tableCellClassList.length !== 0 && editor.queryCommandSupported('mceTableCellToggleClass')) {
         editor.ui.registry.addNestedMenuItem('tablecellclass', {
           icon: 'table-cell-classes',
-          text: 'Cell styles',
+          text: 'Cella stílusok',
           getSubmenuItems: () => buildMenuItems(editor, tableCellClassList, 'tablecellclass', value => editor.execCommand('mceTableCellToggleClass', false, value)),
           onSetup: selectionTargets.onSetupCellOrRow
         });
@@ -3330,50 +3330,50 @@
       if (editor.queryCommandSupported('mceTableApplyCellStyle')) {
         editor.ui.registry.addNestedMenuItem('tablecellvalign', {
           icon: 'vertical-align',
-          text: 'Vertical align',
+          text: 'Vertical tájolás',
           getSubmenuItems: () => buildMenuItems(editor, verticalAlignValues, 'tablecellverticalalign', applyTableCellStyle(editor, 'vertical-align')),
           onSetup: selectionTargets.onSetupCellOrRow
         });
         editor.ui.registry.addNestedMenuItem('tablecellborderwidth', {
           icon: 'border-width',
-          text: 'Border width',
+          text: 'Keret vastagsága',
           getSubmenuItems: () => buildMenuItems(editor, getTableBorderWidths(editor), 'tablecellborderwidth', applyTableCellStyle(editor, 'border-width')),
           onSetup: selectionTargets.onSetupCellOrRow
         });
         editor.ui.registry.addNestedMenuItem('tablecellborderstyle', {
           icon: 'border-style',
-          text: 'Border style',
+          text: 'Keret stílusa',
           getSubmenuItems: () => buildMenuItems(editor, getTableBorderStyles(editor), 'tablecellborderstyle', applyTableCellStyle(editor, 'border-style')),
           onSetup: selectionTargets.onSetupCellOrRow
         });
         editor.ui.registry.addNestedMenuItem('tablecellbackgroundcolor', {
           icon: 'cell-background-color',
-          text: 'Background color',
+          text: 'Háttérszín',
           getSubmenuItems: () => buildColorMenu(editor, getTableBackgroundColorMap(editor), 'background-color'),
           onSetup: selectionTargets.onSetupCellOrRow
         });
         editor.ui.registry.addNestedMenuItem('tablecellbordercolor', {
           icon: 'cell-border-color',
-          text: 'Border color',
+          text: 'Keret színe',
           getSubmenuItems: () => buildColorMenu(editor, getTableBorderColorMap(editor), 'border-color'),
           onSetup: selectionTargets.onSetupCellOrRow
         });
       }
       addToggleMenuIfRegistered('tablecaption', {
         icon: 'table-caption',
-        text: 'Table caption',
+        text: 'Táblázat leírása',
         command: 'mceTableToggleCaption',
         onSetup: selectionTargets.onSetupTableWithCaption
       });
       addToggleMenuIfRegistered('tablerowheader', {
-        text: 'Row header',
+        text: 'Sor fejléce',
         icon: 'table-top-header',
         command: 'mceTableRowType',
         onAction: changeRowHeader(editor),
         onSetup: selectionTargets.onSetupTableRowHeaders
       });
       addToggleMenuIfRegistered('tablecolheader', {
-        text: 'Column header',
+        text: 'Oszlop fejléce',
         icon: 'table-left-header',
         command: 'mceTableColType',
         onAction: changeColumnHeader(editor),

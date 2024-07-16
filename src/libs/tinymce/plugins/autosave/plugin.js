@@ -179,7 +179,7 @@
             editor.plugins.autosave.storeDraft();
           }
           if (!msg && editor.isDirty() && shouldAskBeforeUnload(editor)) {
-            msg = editor.translate('You have unsaved changes are you sure you want to navigate away?');
+            msg = editor.translate('Vannak mentetlen változtatások. Biztosan kilép?');
           }
         });
         if (msg) {
@@ -207,7 +207,7 @@
         onSetup: makeSetupHandler(editor)
       });
       editor.ui.registry.addMenuItem('restoredraft', {
-        text: 'Restore last draft',
+        text: 'Legutolsó piszkozat megnyitása',
         icon: 'restore-draft',
         onAction,
         onSetup: makeSetupHandler(editor)

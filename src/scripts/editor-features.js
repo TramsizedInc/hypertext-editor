@@ -114,20 +114,20 @@ async function editImage() {
     initData.src.value = selectedEl.getAttribute('src') || '';
     initData.alt = selectedEl.getAttribute('alt') || '';
     items = [
-        { type: 'urlinput', label: 'Path, URL or Embed Image', name: 'src', filetype: filetype },
-        { type: 'input', label: 'Alt Text', name: 'alt' }
+        { type: 'urlinput', label: 'Elérési út, URL, vagy kép', name: 'src', filetype: filetype },
+        { type: 'input', label: 'Alternatív szöveg', name: 'alt' }
       ];
   } else {
     items = [
-        { type: 'urlinput', label: 'Path, URL or Embed Image', name: 'src', filetype: filetype },
-        { type: 'input', label: 'Alt Text', name: 'alt' },
-        { type: 'input', label: 'Caption', name: 'captionText' },
-        { type: 'checkbox', label: 'Figure with Caption', name: 'caption' },
+        { type: 'urlinput', label: 'Elérési út, URL, vagy kép', name: 'src', filetype: filetype },
+        { type: 'input', label: 'Alternatív szöveg', name: 'alt' },
+        { type: 'input', label: 'Képleírás', name: 'captionText' },
+        { type: 'checkbox', label: 'Képleírás és ábra', name: 'caption' },
       ];
   }
 
   tinymce.activeEditor.windowManager.open({
-    title: 'Add / Edit Image',
+    title: 'Kép hozzáadása/szerkesztése',
     size: 'normal',
     body: {
       type: 'panel',
@@ -135,8 +135,8 @@ async function editImage() {
     },
     initialData:initData,
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     onSubmit: function (api) {
       let data = api.getData();
@@ -206,7 +206,7 @@ function editEmbed() {
   } 
 
   tinymce.activeEditor.windowManager.open({
-    title: 'Add / Edit Embed',
+    title: 'Beágyazott Hozzáadása / Szerkesztése',
     size: 'medium',
     body: {
       type: 'panel',
@@ -216,8 +216,8 @@ function editEmbed() {
       markup: markup,
     },
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     onSubmit: function (api) {
       let markup = api.getData().markup;
@@ -251,7 +251,7 @@ function showEditBlockMenu() {
   }
 
   tinymce.activeEditor.windowManager.open({
-    title: 'Edit Block',
+    title: 'Blokk szerkesztése',
     size: 'medium',
     body: {
       type: 'panel',
@@ -261,8 +261,8 @@ function showEditBlockMenu() {
       markup: markup,
     },
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     onSubmit: function (api) {
       let markup = api.getData().markup;
@@ -278,7 +278,7 @@ function showAttributesMenu() {
   const editor = tinymce.activeEditor;
 
   let items = [
-        { type: 'input', name: 'name', label: 'Tag Name', enabled: false },
+        { type: 'input', name: 'name', label: 'HTML tag szerkesztő', enabled: false },
       ];
 
   if(editor.selection.getNode().hasAttribute('href')){
@@ -309,14 +309,14 @@ function showAttributesMenu() {
 
 
   editor.windowManager.open({
-    title: 'Edit Attributes',
+    title: 'Tulajdonságok szerkesztése',
     body: {
       type: 'panel',
       items: items,
     },
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     initialData: initData,
     onSubmit: function (api) {
@@ -351,7 +351,7 @@ function createTableOfContents(innerFlag) {
   details.setAttribute('open', 'true');
 
   var summary = document.createElement('summary');
-  summary.textContent = 'Table of Contents';
+  summary.textContent = 'Tartalomjegyzék';
   details.appendChild(summary);
 
   var tocList = document.createElement('p');
@@ -489,8 +489,8 @@ function editCode(title, codeText, callback) {
       ],
     },
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     initialData: {
       codeEditorText: codeText,
@@ -591,7 +591,7 @@ function editHead() {
 
   headText = html_beautify(headText);
 
-  editCode('Edit Head', headText, function (returnText) {
+  editCode('Fejléc szerkesztése', headText, function (returnText) {
     headEl.innerHTML = returnText + '\n\n' + styleHTML;
   });
 }
@@ -611,7 +611,7 @@ function editBody() {
 
   htmlText = html_beautify(htmlText);
 
-  editCode('Edit Body', htmlText, function (returnText) {
+  editCode('Dokumentumtörzs szerkesztése', htmlText, function (returnText) {
 
     currentDocument.body.innerHTML = returnText;
 
@@ -638,19 +638,19 @@ function editDocProps() {
   }
 
   editor.windowManager.open({
-    title: 'Edit Document Properties',
+    title: 'Dokumentum Tulajdonságai',
     body: {
       type: 'panel',
       items: [
-        { type: 'input', label: 'Title', name: 'name' },
-        { type: 'input', label: 'Description', name: 'description' },
-        { type: 'input', label: 'Author', name: 'author' },
-        { type: 'input', label: 'Created', name: 'dateCreated' },
+        { type: 'input', label: 'Cím', name: 'name' },
+        { type: 'input', label: 'Leírás', name: 'description' },
+        { type: 'input', label: 'Szerző', name: 'author' },
+        { type: 'input', label: 'Létrehozva', name: 'dateCreated' },
       ],
     },
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     initialData: initialData,
     onSubmit: function (api) {
@@ -710,14 +710,14 @@ async function editPrefs() {
         { type: 'bar', items: [
           { type: 'button', text: 'Set Working Folder', name: 'set'},
         ]},
-        { type: 'input', label: 'Server', 'placeholder': 'http://localhost:3000/', name: 'localServer', enabled: localServerEnabled},
-        { type: 'label', label: 'Set Server OR Working Folder for page images/media.', items: []}
+        { type: 'input', label: 'Szerver', 'placeholder': 'http://localhost:3000/', name: 'localServer', enabled: localServerEnabled},
+        { type: 'label', label: 'Be kell állítani a szerver', items: []}
 
       ],
     },
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     initialData: initialData,
     onAction: async function(api, details){
@@ -784,17 +784,17 @@ function editPrefs_old() {
   }
 
   editor.windowManager.open({
-    title: 'Edit App Preferences',
+    title: 'Beállítások szerkesztése',
     body: {
       type: 'panel',
       items: [
-        { type: 'input', label: 'Author', name: 'author' },
+        { type: 'input', label: 'Szerző', name: 'author' },
         { type: 'input', label: 'Doc Base URL', 'placeholder': 'http://localhost:3000/', name: 'localServer' },
       ],
     },
     buttons: [
-      { type: 'cancel', name: 'cancel', text: 'Cancel' },
-      { type: 'submit', name: 'save', text: 'Save', primary: true },
+      { type: 'cancel', name: 'cancel', text: 'Mégsem' },
+      { type: 'submit', name: 'save', text: 'Mentés', primary: true },
     ],
     initialData: initialData,
     onSubmit: function (api) {

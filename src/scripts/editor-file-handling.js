@@ -459,7 +459,7 @@ function saveHTMLFileAsDownload(currentHTMLFileHandle){
   if(currentHTMLFileHandle){
     filename = currentHTMLFileHandle.name;
   } else {
-    filename = window.prompt('Save As...', filename);
+    filename = window.prompt('Mentés mint...', filename);
   }
 
   if(filename == null){

@@ -258,7 +258,7 @@ function setCSSText(cssText){
 
 function setCSSDefault(){
 
-  tinymce.activeEditor.windowManager.confirm('Use this document\'s CSS for new documents?', (state) => {
+  tinymce.activeEditor.windowManager.confirm('Beállítja ezen dokumentum stíluslapját alapértelmezettnek? Ez minden új dokumentumra hatással lesz!', (state) => {
     if(state){
       let cssText = getCSSText();
       localStorage.setItem('defaultCSS', cssText);
@@ -270,7 +270,7 @@ function setCSSDefault(){
 /* *********************** */
 
 async function resetCSSDefault(){
-  tinymce.activeEditor.windowManager.confirm('Reset default CSS used for new documents?', (state) => {
+  tinymce.activeEditor.windowManager.confirm('Visszaállítja az alapértelmezett stíluslapot? Ez minden új dokumentumra hatással lesz!', (state) => {
     if(state){
         localStorage.removeItem('defaultCSS');
       }

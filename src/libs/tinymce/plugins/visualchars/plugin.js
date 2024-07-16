@@ -479,13 +479,13 @@
     const register = (editor, toggleState) => {
       const onAction = () => editor.execCommand('mceVisualChars');
       editor.ui.registry.addToggleButton('visualchars', {
-        tooltip: 'Show invisible characters',
+        tooltip: 'Minden látszik',
         icon: 'visualchars',
         onAction,
         onSetup: toggleActiveState(editor, toggleState)
       });
       editor.ui.registry.addToggleMenuItem('visualchars', {
-        text: 'Show invisible characters',
+        text: 'Minden látszik',
         icon: 'visualchars',
         onAction,
         onSetup: toggleActiveState(editor, toggleState)

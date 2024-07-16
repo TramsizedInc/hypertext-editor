@@ -246,7 +246,7 @@ html.dark-mode .tox-menubar {
 
   :root {
     --ui-fg-color: #fff;
-    --ui-bg-color: #020887;
+    --ui-bg-color: #870254;
   }
 
   body{
@@ -276,8 +276,9 @@ html.dark-mode .tox-menubar {
 
   :root {
     --ui-fg-color: #fff;
-    --ui-bg-color: #020887;
+    --ui-bg-color: #87026a;
   }
+  /* UI COLORS*/
   
   .tox .tox-mbtn--active .tox-mbtn__select-label {
     color: var(--ui-bg-color);

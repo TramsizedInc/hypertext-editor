@@ -126,7 +126,7 @@ if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.
 }
 
 window.addEventListener('appinstalled', e => {
-  console.log("success app install!");
+  console.log("Alkalmazás telepítve!");
 });
 
 

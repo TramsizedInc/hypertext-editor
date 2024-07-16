@@ -94,7 +94,7 @@
     const open = editor => {
       const currentId = getId(editor);
       editor.windowManager.open({
-        title: 'Anchor',
+        title: 'Hiperhivatkozás',
         size: 'normal',
         body: {
           type: 'panel',
@@ -109,12 +109,12 @@
           {
             type: 'cancel',
             name: 'cancel',
-            text: 'Cancel'
+            text: 'Mégsem'
           },
           {
             type: 'submit',
             name: 'save',
-            text: 'Save',
+            text: 'Mentés',
             primary: true
           }
         ],
@@ -168,13 +168,13 @@
       const onAction = () => editor.execCommand('mceAnchor');
       editor.ui.registry.addToggleButton('anchor', {
         icon: 'bookmark',
-        tooltip: 'Anchor',
+        tooltip: 'Hiperhivatkozás',
         onAction,
         onSetup: buttonApi => editor.selection.selectorChangedWithUnbind('a:not([href])', buttonApi.setActive).unbind
       });
       editor.ui.registry.addMenuItem('anchor', {
         icon: 'bookmark',
-        text: 'Anchor...',
+        text: 'Hiperhivatkozás...',
         onAction
       });
     };

@@ -18,7 +18,8 @@
     "gulp": "^4.0.2",
     "gulp-connect": "^5.7.0",
     "gulp-copy": "^4.0.1",
-    "tinymce": "6.2.0"
+    "tinymce": "6.2.0",
+    "toastr": "^2.1.4"
   },
   "scripts": {
     "build": "gulp build",

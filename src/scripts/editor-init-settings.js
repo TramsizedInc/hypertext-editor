@@ -31,28 +31,28 @@ let editorInitSettings = {
   menubar: 'file edit view insert format blocks tools help',
 
   menu: {
-    file: { title: 'File', items: 'menunew menuopen | newwindow setfolder | menusave menusaveas | cssfile-menu | edit-doc-props | restoredraft | preview print ' },
-    edit: { title: 'Edit', items: 'undo redo | cut copy paste selectall | pastetext | searchreplace' },
-    view: { title: 'View', items: 'visualchars visualblocks | toggle-textmenu toggle-darkmode | wordcount' },
-    insert: { title: 'Insert', items: 'link image embed codesample add-toc hr anchor | inserttable | insertdatetime' },
-    format: { title: 'Format', items: 'bold italic underline strikethrough superscript subscript codeformat forecolor backcolor | removeformat ' },
-    blocks: { title: 'Paragraphs', items: 'styles | indentation align | unordered ordered' },
-    tools: { title: 'Tools', items: 'edit-prefs | edit-head edit-body edit-css | edit-tag | run-macro ' },
-    help: { title: 'Help', items: 'help' },
+    file: { title: 'Fájlok', items: 'menunew menuopen | newwindow setfolder | menusave menusaveas | cssfile-menu | edit-doc-props | restoredraft | preview print ' },
+    edit: { title: 'Szerkesztés', items: 'undo redo | cut copy paste selectall | pastetext | searchreplace' },
+    view: { title: 'Nézet', items: 'visualchars visualblocks | toggle-textmenu toggle-darkmode | wordcount' },
+    insert: { title: 'Beszúrás', items: 'link image embed codesample add-toc hr anchor | inserttable | insertdatetime' },
+    format: { title: 'Formázások', items: 'bold italic underline strikethrough superscript subscript codeformat forecolor backcolor | removeformat ' },
+    blocks: { title: 'Bekezdések', items: 'styles | indentation align | unordered ordered' },
+    tools: { title: 'Eszközök', items: 'edit-prefs | edit-head edit-body edit-css | edit-tag | run-macro ' },
+    help: { title: 'Súgó', items: 'help' },
   },
 
   style_formats: [
-    { title: 'Headings', items: [
-      { title: 'Heading 1', format: 'h1' },
-      { title: 'Heading 2', format: 'h2' },
-      { title: 'Heading 3', format: 'h3' },
-      { title: 'Heading 4', format: 'h4' },
-      { title: 'Heading 5', format: 'h5' },
+    { title: 'Címsorok', items: [
+      { title: 'Címsor 1', format: 'h1' },
+      { title: 'Címsor 2', format: 'h2' },
+      { title: 'Címsor 3', format: 'h3' },
+      { title: 'Címsor 4', format: 'h4' },
+      { title: 'Címsor 5', format: 'h5' },
     ]},
-    { title: 'Blocks', items: [
-      { title: 'Paragraph', format: 'p' },
-      { title: 'Blockquote', format: 'blockquote' },
-      { title: 'Pre', format: 'pre' }
+    { title: 'Blokkok', items: [
+      { title: 'Bekezdés', format: 'p' },
+      { title: 'Idézet', format: 'blockquote' },
+      { title: 'Formázatlan', format: 'pre' }
     ]}
   ],
 
